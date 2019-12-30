@@ -1,0 +1,70 @@
+body,
+.medya .govde {
+    background: #111111;
+}
+body::-webkit-scrollbar-track {
+    background-color: #181818;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #a53f1d;
+}
+header,
+.modul-hakkinda,
+.kripto-paralar .modul-bilgisi,
+.abonelik {
+    background: #a53f1d !important;
+    border: 0 !important;
+}
+.tam-kucuk-sorgu,
+.detay-yatay-sorgu,
+.istatistik {
+    background: #181818 !important;
+    border: none;
+}
+.medya-simgeli.trend-mod,
+.medya-resimsiz,
+.kripto-paralar .tek,
+.diger-icerikler,
+.medya-kucuk .govde,
+.medya-sag,
+.medya-simgeli,
+.konu-liste .liste span {
+    background: #181818 !important;
+    border-bottom: #181818 1px solid;
+}
+.tam-kucuk-sorgu:before,
+.tam-kucuk-sorgu:after {
+    display: none;
+}
+.icerik,
+.slayt,
+.detay,
+.post,
+.yorumkapsam,
+.sorgu-yatay .oge,
+.medya-orta .govde {
+    background: #181818 !important;
+}
+.post,
+.istatistik,
+.yorumlar .yorum .mesaj {
+    color: #aaa;
+}
+.medya .baslik,
+a,
+.post-baslik,
+.lnk.lnk-2 {
+    color: #F5F5F5;
+}
+body:after {
+    display: block;
+    padding-top: 5%;
+    font-size: small;
+    padding-left: 85%;
+    content: "Gece Modu v4.5-beta - The Time Lord";
+    color: #aaa;
+}

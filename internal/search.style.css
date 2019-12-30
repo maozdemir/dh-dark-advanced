@@ -1,0 +1,38 @@
+body {
+    background: #252525;
+    color: #ccc;
+}
+body::-webkit-scrollbar-track {
+    background-color: #181818;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+body::-webkit-scrollbar-thumb,
+.filter input:checked ~ label,
+.pagination .page.active {
+    background-color: #a53f1d;
+}
+h1 {
+    color: #a53f1d;
+}
+a {
+    color: #4785b8;
+}
+.search-wrapper input {
+    background-color: #1b1b1b;
+    color: #aaa;
+    outline: none;
+}
+.search-wrapper {
+    background-color: #1b1b1b;
+}
+.pagination .page,
+.filter input,
+.pagination a:last-child {
+    border: #555 1px solid;
+}
+.pagination .page {
+    color: #aaa;
+}
