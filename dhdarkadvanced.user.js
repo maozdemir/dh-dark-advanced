@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DH Dark Advanced
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.3-b1
 // @description  Gelişmiş Gece Modu
 // @author       The Time Lord
 // @match        *://forum.donanimhaber.com/*
@@ -20,10 +20,15 @@
     var cssTxt = GM_getResourceText ("DH_DARK");
     GM_addStyle (cssTxt);
 
-    $('body').append('<div class="TTL_CustomToolbar"></div>');
-    $(window).on('load', function() {
+    window.onload = function() {
+
+        $('body').append('<div class="TTL_CustomToolbar"></div>');
+
         var currentPage = $($('body')).html();
-        var forumIDregex = new RegExp(/yeni-konu-(.*?)\" class\=\"kl-btn/g);
+        console.log(currentPage);
+        var forumIDregex = new RegExp(/GetReplyForm\?forumID\=(.*?)\&/g);
+        if(forumIDregex == null) forumIDregex = new RegExp(/yeni-konu-(.*?)\" class\=\"kl-btn/g);
+
         var forumID = forumIDregex.exec(currentPage)[1];
         console.log("REGEX RESULT: "+forumIDregex.exec(currentPage)[1]);
         $.get("https://forum.donanimhaber.com/api2/GlobalApi/gettopics?forumId="+forumID+"&page=1&filter=", function( data ) {
@@ -39,9 +44,12 @@
                     var iwa = i+adsCount-1;
                     var content = "<div class=\"TTL_ToolboxItem\">" + v.parentElement.outerHTML + " <span>(" + elements_replies[iwa].innerHTML + ")</span></div>";
                     injectContent += content;
+                    console.log(content);
+                    console.log("i"+i+"iwa"+iwa);
                 }
             });
             $('.TTL_CustomToolbar').html(injectContent);
+            console.log( "Load was performed for Page1.");
         });
         $.get("https://forum.donanimhaber.com/api2/GlobalApi/gettopics?forumId="+forumID+"&page=2&filter=", function( data ) {
             var userData = data["Data"]["Html"];
@@ -56,14 +64,20 @@
                     var iwa = i+adsCount-1;
                     var content = "<div class=\"TTL_ToolboxItem\">" + v.parentElement.outerHTML + " <span>(" + elements_replies[iwa].innerHTML + ")</span></div>";
                     injectContent += content;
+                    console.log(content);
+                    console.log("i"+i+"iwa"+iwa);
                 }
             });
             $('.TTL_CustomToolbar').append(injectContent);
+            console.log( "Load was performed for Page1.");
         });
+        const queryString = window.location.search;
+        console.log(queryString);
 
 
 
     if(getUrlParameter(window.location.href)["configPage"] === "true") {
+        console.log("INIT xhr");
         GM.xmlHttpRequest({
             method: "GET",
             url: "https://github.com/impulsiva/DH-Gece-Modu/raw/master/internals/config.html",
@@ -109,7 +123,7 @@
         });
     }
 
-    });
+    }
 
     function getUrlParameter(url) {
         var toReturn = {};
