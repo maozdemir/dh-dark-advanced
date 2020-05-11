@@ -1,0 +1,52 @@
+.TTL_CustomToolbar {
+    display: block;
+    color: #fff;
+    position: fixed;
+    background-color: #181818;
+    height: 100%;
+    width: 300px;
+    left: -200px;
+    z-index: 999999999999999999999999999999;
+    transition: all .3s ease-out;
+    padding: 5px;
+    overflow-y: scroll;
+}
+.TTL_CustomToolbar:hover {
+    left: 0;
+    transition: all .3s ease-out;
+}
+.TTL_CustomToolbar a{
+    color: #ddd;
+    padding-top: 6px;
+}
+.TTL_CustomToolbar h3 {
+    display: inline;
+    font-weight: normal;
+}
+.TTL_ToolboxItem {
+    padding: 8px;
+    padding-top: 8px;
+}
+.TTL_ToolboxItem:hover {
+    background-color: #333333;
+}
+.TTL_ToolboxItem span {
+    color: #aaa;
+    padding-left: 5px;
+}
+.TTL_Settings {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+    color: #ddd;
+    margin-top: 250px;
+}
+.TTL_Settings label {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+/*.TTL_HideToolbar {
+    left: -200px;
+}*/
