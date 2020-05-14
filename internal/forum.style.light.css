@@ -612,50 +612,6 @@ table tr td b a:visited {
 .dhsearch .dropdown .dropdown-menu .list li {
     border-bottom: 1px solid #111111 !important;
 }
-.like-unlike,
-.profile-new .left-column .userinfo,
-.profile-new .left-column .box,
-.profile-new .left-column .friends,
-.profile-new .right-feed .box,
-.profile-new .right-feed .choices,
-.profile-new .right-feed .boxes,
-.soltaraf .populerkonu,
-.kl-icerik .kl-icerik-satir,
-.mesajlarim,
-.titleclass td,
-.forumicerigi .forumkonusu,
-.yenikonusatir,
-textarea#body,
-.inboxYeni .mesajDetay .tek .sag .mesajin .kutu,
-.uploadtek,
-.uploadtek .ekle,
-.dhsearchbar,
-.dhsearchbar .searchbaslik .Top,
-.sayfafull .soltaraf .hizli-forum-arama input[type="text"],
-.arabar,
-.inboxYeni .mesajDetay .tek,
-.inboxYeni .mesajDetay .tek .sag .icerik,
-.inboxYeni .inboxUst,
-.inboxYeni .inboxUst a,
-.inboxDarSol .topluislemsol,
-.inboxDarSol .topluislemsol a,
-.inboxYeni .solMenu .tek,
-.inboxYeni .solMenu .tek span,
-.inboxYeni .solMenu .ara,
-.profile-new,
-.profile-new .right-feed .box .list .line.imza,
-.favaratut input[type=text],
-.input-style,
-header .ust .sag .giris .input-tut .unuttum,
-header .ust .sag .baglan a,
-.ie-navigasyon .tree-ul,
-.ie-navigasyon .tree-ul a,
-.ie-navigasyon .tree,
-#leftwrapper .menu .tek,
-.bildirimli,.acilir-menu-1 span.bg.scroll-kontrol {
-    background: #181818 !important;
-    color: #aaa !important;
-}
 .inboxDarSol .topluislemsol .profile-new .left-column .friends a,
 .profile-new .right-feed .box a,
 .profile-new .right-feed .choices a,
@@ -996,10 +952,6 @@ table {
 .ki-btn:not(.new-btn):nth-of-type(2):after {
     content: "Hızlı Cevap";
 }
-.yorum-hakkinda a b,
-.inboxYeni .mesajDetay .tek .sag .isim a {
-    color: #a53f1d;
-}
 .like-unlike h1,
 .like-unlike h2,
 #leftwrapper .menu > li > ul li a {
@@ -1047,17 +999,13 @@ select[name="forumid"] option {
     padding-bottom: 2px;
     font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', 'Fira Sans', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
 }
-select[name="forumid"] option:selected {
-    color: #CCFF33;
-    background: #FF3366;
-}
+
 .quote i:nth-of-type(1),
 .quote br:nth-of-type(1),
 .quote br:nth-of-type(2) {
     display: none;
 }
 .quote {
-    background-color: #212121;
     border: none;
     color: #aaa;
     padding: 18px;
@@ -1067,9 +1015,6 @@ select[name="forumid"] option:selected {
 .quote::first-line {
     font-style: italic;
     color: #888;
-}
-header .bildirimler.notification .bildirim-list .icerik .tek .baslik b {
-    color: #f5f5f5;
 }
 .sayfanumaralandirma .left {
     width: 100%;
