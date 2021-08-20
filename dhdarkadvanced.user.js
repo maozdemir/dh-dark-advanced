@@ -5,7 +5,6 @@
 // @description  Gelişmiş Gece Modu
 // @author       The Time Lord
 // @match        *://forum.donanimhaber.com/*
-// @match        *://github.com/*
 // @grant        GM.getValue
 // @run-at       document-start
 // @grant        GM.setValue
