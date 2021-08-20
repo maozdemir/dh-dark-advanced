@@ -9,7 +9,7 @@
 // @run-at       document-start
 // @grant        GM.setValue
 // @grant        GM.xmlHttpRequest
-// @resource     DH_DARK https://github.com/impulsiva/dh-dark-advanced/raw/master/internal/forum.style.css
+// @resource     DH_DARK https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.css
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // ==/UserScript==
