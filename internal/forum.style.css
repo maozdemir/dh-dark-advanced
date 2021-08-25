@@ -716,7 +716,8 @@ ul.token-input-list-facebook {
 footer .footericerik,
 footer .footericerik a:not(.yazilim-sponsor),
 .info,
-.info a,.acilir-menu-1 li a {
+.info a,.acilir-menu-1 li a,
+.google-news-subscribe-button > span {
     color: #aaa!important;
 }
 .populerkonu .populersatir,
@@ -863,7 +864,8 @@ a.birdaha,
 #leftwrapper .menu > li > a.active,
 .ie-navigasyon .kutu ul li,
 .ie-navigasyon .kutu ul li a,
-header .ust .sag .ana-menu a.one-cikar {
+header .ust .sag .ana-menu a.one-cikar,
+.google-news-subscribe-button {
     background: #181818 !important;
     color: #aaa !important;
     border: 1px solid #1f2128;
