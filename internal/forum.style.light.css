@@ -1087,6 +1087,20 @@ tr > td.c2:nth-of-type(5) a {
 .sayfafull.cek .ie-navigasyon {
     width: 15%;
 }
+.supercharger {
+    font-size: x-large!important;
+    color: #aaa !important;
+    height: auto !important;
+    border-radius: 5px !important;
+    padding: 5px 0 !important;
+    display: inline-block !important;
+    padding-left: 5px !important;
+    margin-right: 10px;
+}
+.TTL_Popup {
+    display: none;
+    margin: auto;
+}
 
 .TTL_CustomToolbar {
     display: block;
@@ -1125,11 +1139,12 @@ tr > td.c2:nth-of-type(5) a {
     padding-left: 5px;
 }
 .TTL_Settings {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-    color: #ddd;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    color: #000;
+    background-color: #aaa;
     margin-top: 250px;
 }
 .TTL_Settings label {

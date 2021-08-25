@@ -12,7 +12,7 @@
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @require      https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
 // @resource     DH_DARK https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.css
-// @resource     DH_LIGHT https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.light.css?ver=6
+// @resource     DH_LIGHT https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.light.css
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // ==/UserScript==
@@ -131,6 +131,15 @@
         $(".TTL_Popup").html(HTML_Settings);
         $('.sag .uye .avatar').before('<a href="#" title="Supercharger" id="TTL_SettingsButton" class="supercharger">⚡</a>');
         $('#TTL_SettingsButton').click(function() {
+            if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
+            if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
+            if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
+            if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
+            if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
+            if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
+            if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
+            if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
+
             $(".TTL_Popup").dialog(
                 {
                     modal: true,
@@ -139,14 +148,7 @@
                 );
         })
         
-        if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
-        if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
-        if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
-        if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
-        if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
-        if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
-        if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
-        if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
+
 
         $("#TTL_SettingsButton").click(function(){
             $(".TTL_Popup").html(HTML_Settings);
@@ -168,6 +170,7 @@
                 GM.setValue("TTL_SB", TTL_SB);
                 GM.setValue("TTL_Dark", TTL_Dark);
                 alert("Kaydedildi!");
+                $(".TTL_Popup").dialog("close");
             });
         });
     }
