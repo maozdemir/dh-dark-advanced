@@ -1150,6 +1150,28 @@ div[id*="dha_"]:hover {
     display: none;
 }*/
 /**COOL STUFF END**/
+
+/** EDİTÖR TEMASI **/
+.ql-editor .ql-og div.og-title.with-video,
+.ql-editor .ql-og div.og-title.with-full-image,
+.ql-editor .ql-og div.og-title {
+    background: #323232 !important;
+    border: none !important;
+}
+.ql-editor .ql-og div.og-description {
+    background-color: #212121 !important;
+    border: none !important;
+}
+.ql-editor .ql-og a.og-link {
+    background: #161616 !important;
+    border: none !important;
+}
+.ql-editor .ql-og div.og-description,
+.ql-editor .ql-og {
+    background: #141414 !important;
+    border: none !important;
+}
+
 header.daralt .ust .sag .uye .cikis {
     width: 20px;
     height: 20px!important;
