@@ -169,6 +169,9 @@ header nav.alt a,
 header .ust .sag .uye .cikis {
     font-size: small;
 }
+header .ust .sag .ana-menu a.one-cikar {
+    height: 33px !important;
+}
 header .ust .sag .ana-menu a {
     background: #181818 !important;
     color: #aaa !important;
@@ -384,6 +387,7 @@ font,
 .ki-btn.new-btn i,
 .ki-btn.new-btn span,
 .inboxYeni .mesajDetay .tek .sag .mesajgonder,
+header .one-cikar .sag,
 .forum-galeri .ust .text,
 .forumdizin,
 .forumdizin a,
@@ -764,6 +768,7 @@ a.birdaha:link,
 .kl-btn,
 .kl-btn a,
 .ki-btn .onecikar-oy,
+header .one-cikar .sag,
 .anket button,
 .anket.sonuc .oysayisi,
 .gorev-menu ul li:hover,
@@ -850,7 +855,8 @@ a.birdaha,
 #leftwrapper .menu > li > a,
 #leftwrapper .menu > li > a.active,
 .ie-navigasyon .kutu ul li,
-.ie-navigasyon .kutu ul li a {
+.ie-navigasyon .kutu ul li a,
+header .ust .sag .ana-menu a.one-cikar {
     background: #181818 !important;
     color: #aaa !important;
     border: 1px solid #1f2128;
@@ -1126,6 +1132,11 @@ tr > td.c2:nth-of-type(5) a {
     width: 15%;
 }
 
+.TTL_Popup {
+    display: none;
+    margin: auto;
+}
+
 .TTL_CustomToolbar {
     display: block;
     color: #fff;
@@ -1137,6 +1148,7 @@ tr > td.c2:nth-of-type(5) a {
     z-index: 999999999999999999999999999999;
     transition: all .3s ease-out;
     padding: 5px;
+    top: 0;
     overflow-y: scroll;
 }
 .TTL_CustomToolbar:hover {
@@ -1163,12 +1175,10 @@ tr > td.c2:nth-of-type(5) a {
     padding-left: 5px;
 }
 .TTL_Settings {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+    border: 3px solid green;
+    padding: 10px;
     color: #ddd;
-    margin-top: 250px;
+    background: #181818;
 }
 .TTL_Settings label {
   display: inline-block;
