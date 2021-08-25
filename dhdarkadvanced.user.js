@@ -134,7 +134,7 @@
         $(".TTL_Popup").dialog(
             {
                 modal: true, height: 400, width: 400,
-                hide: { effect: "explode", duration: 1000 }
+                hide: { effect: "fade", duration: 500 }
             }
             );
     })
