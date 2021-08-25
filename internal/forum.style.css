@@ -507,7 +507,8 @@ th,
 .inboxYeni .mesajDetay .bilgi .sesli-sessiz,
 .bilgi .yorumun-devami,
 .yanit-liste .tek .alt .mesaj-bilgi .kullanici,
-.subhead {
+.subhead,
+.covid-container .covid-content>div>b>a {
     color: #a53f1d !important;
 }
 .yenikonuac .hizlicevap,
@@ -547,23 +548,23 @@ th,
     color: #ddd!important;
     border-bottom: 2px solid #323232;
 }
+.profile-new,
+.tumistekler,
+.tumarkadaslar,.buton-yanit,
+.covid-container .covid-content {
+    color: #aaa;
+    background: #121212 !important;
+}
+.kl-tablo .kl-icerik .kl-icerik-satir a,
+.mesajlarim a,
 .sayisal-text,
 .kl-basligi,
 .forumtitle,
 .sayfafull .kullanicidetay a,
 .profile-new .left-column .friends .list .friend a,
-.profile-new .left-column .friends .list .line a {
-    color: #aaa;
-}
-.profile-new,
-.tumistekler,
-.tumarkadaslar,.buton-yanit {
-    color: #aaa;
-    background: #121212 !important;
-}
-.kl-tablo .kl-icerik .kl-icerik-satir a,
-.mesajlarim a {
-    color: #aaa;
+.profile-new .left-column .friends .list .line a,
+.covid-container .covid-header .head-tab .button span.title {
+    color: #aaa !important;
 }
 .icerik a,
 .yenikonusutun2 a:link {
@@ -571,9 +572,10 @@ th,
 }
 .mesaj-hakkinda,
 .mesaj-topluluk,
-.profile-new .right-feed .boxes .list .line.yeni a,.acilir-menu-1 li a:hover {
+.profile-new .right-feed .boxes .list .line.yeni a,.acilir-menu-1 li a:hover,
+.covid-container .covid-header .head-tab .button {
     background: #2f2f2f !important;
-    color: #888;
+    color: #888 !important;
 }
 .mesaj-hakkinda a,
 .mesaj-topluluk a,
@@ -604,7 +606,8 @@ th,
 .kl-icerik .kl-icerik-satir,
 .inboxDarSol .topluislemsol,
 .mesajlarim,
-.dhsearch .dropdown .dropdown-menu .list li {
+.dhsearch .dropdown .dropdown-menu .list li,
+.covid-container .covid-content>div {
     border-bottom: 1px solid #111111 !important;
 }
 .like-unlike,
@@ -647,7 +650,8 @@ header .ust .sag .baglan a,
 .ie-navigasyon .tree-ul a,
 .ie-navigasyon .tree,
 #leftwrapper .menu .tek,
-.bildirimli,.acilir-menu-1 span.bg.scroll-kontrol {
+.bildirimli,.acilir-menu-1 span.bg.scroll-kontrol,
+.covid-container .covid-header .head-tab .button.active {
     background: #181818 !important;
     color: #aaa !important;
 }
@@ -692,7 +696,8 @@ a.c2 {
 ul.token-input-list-facebook li input,
 ul.token-input-list-facebook,
 .favbuttons,
-.etiketayari-full {
+.etiketayari-full,
+.covid-container a.show-more {
     background-color: #1d1d1d !important;
     color: #aaa !important;
     border: none;
@@ -723,7 +728,9 @@ footer .footericerik a:not(.yazilim-sponsor),
 .favaratut input[type=text],
 .lnk-bkz,
 .sayfafull .soltaraf .hizli-forum-arama .tahminler,
-.dhsearch .dropdown .dropdown-menu {
+.dhsearch .dropdown .dropdown-menu,
+.covid-container .covid-content,
+.covid-container .covid-header {
     border: 1px solid #1d1d1d;
 }
 .populerkonu .populersatir .one-cikar,
@@ -919,8 +926,13 @@ fieldset,
 .mesaj-topluluk .fav,
 .mesaj-topluluk .like,
 header .ust .sag .uye .bildirimler.yok img.icon,
-#leftwrapper .menu > li > a .menu-ok img {
-    filter: invert(80%);
+#leftwrapper .menu > li > a .menu-ok img,
+.covid-container a.show-more img,
+.covid-container .covid-header img.covid-icon {
+    filter: invert(80%) !important;
+}
+.covid-container .covid-header .head-tab .button.active .covid-icon.red {
+    filter: none !important;
 }
 header .ust .sag .uye .bildirimler.yok img.icon,
 header.daralt .ust .sag .uye .bildirimler.yok img.icon {
