@@ -1119,8 +1119,13 @@ header.daralt .ust .sag .uye .cikis {
     width: 20px;
     height: 20px!important;
     content: none;
+    font-size: 0!important;
+    line-height: 0 !important;
     font-size: 0;
-    line-height: 0;
+}
+
+header .ust .sag .uye .cikis {
+    font-size: 0!important;
 }
 
 tr > td.c2:nth-of-type(6) a,
