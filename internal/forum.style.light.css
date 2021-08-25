@@ -2,7 +2,7 @@ body::-webkit-scrollbar-track,
 .inboxYeni .mesajListeDar::-webkit-scrollbar-track,
 .bildirim-tutucu::-webkit-scrollbar-track,
 .TTL_CustomToolbar::-webkit-scrollbar-track{
-    background-color: #181818;
+    background-color: #f5f5f5;
 }
 body::-webkit-scrollbar,
 .inboxYeni .mesajListeDar::-webkit-scrollbar,
@@ -21,7 +21,6 @@ body::-webkit-scrollbar-thumb,
     background-color: #a53f1d;
 }
 .topmenu-new {
-    background: #181818 !important;
     height: 30px !important;
     border: 0px !important;
     padding-top: 0 !important;
@@ -29,15 +28,8 @@ body::-webkit-scrollbar-thumb,
 }
 .topmenu-new li a {
     padding-top: 3px !important;
-    color: #aaa !important;
     border-radius: 5px !important;
     height: 27px !important;
-}
-.topmenu-new li a:hover,
-.sayfafull .soltaraf .hizli-forum-arama .tahminler a:hover,
-.sayfafull .soltaraf .hizli-forum-arama .tahminler a:hover strong {
-    background: #666 !important;
-    color: #aaa !important;
 }
 .topmenu-new li div {
     margin-top: 8px !important;
@@ -49,23 +41,13 @@ body::-webkit-scrollbar-thumb,
     padding-top: 3px !important;
     padding-bottom: 3px !important;
     border-radius: 5px !important;
-    background: #181818 !important;
     margin: 0 !important;
     height: 100% !important;
-}
-.topmenu-new li div a:hover,
-.topmenu-new li div p a:hover,
-header .bildirimler.notification .bildirim-list,
-header .bildirimler.notification .bildirim-list .bil-ust .baslik {
-    background: #181818 !important;
-    color: #aaa !important;
 }
 .topmenu-new li div {
     display: inline-block !important;
     position: absolute !important;
     top: 22px !important;
-    background: #181818 !important;
-    border-bottom: 1px solid #333 !important;
     z-index: 99999999 !important;
     width: 170px !important;
     border-bottom-left-radius: 3px !important;
@@ -77,8 +59,6 @@ header .bildirimler.notification .bildirim-list .bil-ust .baslik {
 }
 .search .box,
 input {
-    background: #181818 !important;
-    color: #aaa !important;
     border: 0 !important;
     border-radius: 5px !important;
     height: 34px !important;
@@ -86,16 +66,12 @@ input {
 .ya-saas-widget__input,
 .arama .kutu,
 .altkisimdetay .kutu {
-    background: #181818 !important;
-    color: #aaa !important;
     border: 0 !important;
     border-radius: 5px !important;
 }
 .search .button,
 .arama .butonara,
 button {
-    background: #181818 !important;
-    color: #aaa !important;
     border: 0 !important;
     border-radius: 5px !important;
     height: 34px !important;
@@ -106,12 +82,6 @@ button {
 
 
 /* ########## NEW HEADER ########## */
-header .ust .foruma-git .ara {
-    background: #181818 !important;
-    color: #aaa !important;
-    border: 0 !important;
-    border-radius: 5px !important;
-}
 header .ust .sag .ana-menu span.acilir a img {
     margin: 10px 0 7px 5px;
     float: right;
@@ -126,48 +96,16 @@ header .ust .sag .uye .bildirimler .bildirim-ac {
     box-sizing: unset !important;
 }
 header .ust .sag .uye .bildirimler.yok .bildirim-ac {
-    background: #181818 !important;
     height: 22px !important;
     margin: 0 !important;
     padding-top: 5px !important;
     vertical-align: middle !important;
     padding-right: 5px;
-    border: 1px solid #a8a8a8;
 }
 header .ust,
 header nav.alt {
     padding-left: 13%;
     padding-right: 13%;
-}
-header nav.alt span.acilir ul span:after,
-header nav.alt span.acilir ul span:before,
-header .ust .sag .ana-menu span.acilir ul span.bg:before,
-header .bildirimler.notification .bildirim-list .icerik .tek,
-header .bildirimler.notification .bildirim-list .bil-ust,
-
-.yanit-liste .tek,
-#leftwrapper .menu .tek {
-    border-bottom: 1px solid #181818 !important;
-}
-header .bildirimler.notification .bildirim-list .bil-alt,
-.ie-navigasyon .kutu ul li {
-    border-top: 1px solid #181818 !important;
-}
-header .bildirimler.notification .bildirim-list,
-#leftwrapper .menu,
-.ie-navigasyon .tree,
-.ie-navigasyon .kutu {
-    border: 1px solid #181818 !important;
-}
-header .bildirimler.notification .bildirim-list .icerik .tek:hover,
-.galerilistele {
-    background: #060606;
-}
-header nav.alt .takip a {
-    background: #181818 !important;
-    color: #aaa !important;
-    border: 0 !important;
-    border-radius: 5px !important;
 }
 header .ust .sag .ana-menu a,
 header nav.alt a,
@@ -175,8 +113,6 @@ header .ust .sag .uye .cikis {
     font-size: small;
 }
 header .ust .sag .ana-menu a {
-    background: #181818 !important;
-    color: #aaa !important;
     height: 22px !important;
     border-radius: 5px !important;
     padding: 5px 0 !important;
@@ -184,24 +120,10 @@ header .ust .sag .ana-menu a {
     padding-right: 5px !important;
     line-height: 23px;
 }
-header .DH-Logo,
-header .ust,
-header nav.alt span.acilir ul span,
-header nav.alt span.acilir,
-header .ust .sag .ana-menu span.acilir ul span.bg {
-    background: #181818 !important;
-    border: 0 !important;
-}
 header nav.alt {
-    background: #181818 !important;
     height: 30px;
     border: 0px;
     padding-top: 0;
-}
-header nav.alt a:hover,
-header nav.alt span.acilir:hover {
-    background: #181818 !important;
-    color: #aaa !important;
 }
 header.daralt .ust {
     height: 46px;
@@ -236,7 +158,6 @@ header .ust .sag .ana-menu a .sayi {
     box-sizing: unset !important;
 }
 .notification .counter.yok {
-    background: #181818 !important;
     height: 26px !important;
     margin: 0 !important;
     padding-top: 5px !important;
@@ -259,8 +180,6 @@ header .ust .sag .ana-menu a .sayi,
 .user .info a,
 .loginout .cikisbutonu,
 header .ust .sag .uye .cikis {
-    background: #181818 !important;
-    color: #aaa !important;
     height: 22px !important;
     border-radius: 5px !important;
     padding: 5px 0 !important;
@@ -271,55 +190,34 @@ header .ust .sag .uye .cikis {
 .loginout .cikisbutonu,
 header .ust .sag .uye .cikis,
 header .ust .sag .ana-menu .bg a {
-    background: #181818 !important;
-    color: #aaa !important;
     height: auto !important;
     border-radius: 5px !important;
     padding: 5px 0 !important;
     display: inline-block !important;
     padding-right: 5px !important;
 }
-.user .info a:hover,
-.loginout .cikisbutonu:hover {
-    background: #666 !important;
-    color: #aaa !important;
-}
 .cikisbutonu {
     height: 32px !important;
     padding: 5px !important;
     padding-top: 0px !important;
 }
-.logo-new {
-    background: #181818 !important;
-    border: 0 !important;
-}
 header nav.alt {
-    background: #181818 !important;
     height: 30px;
     border: 0px;
     padding-top: 0;
 }
-header nav.alt a:hover,
-header nav.alt span.acilir:hover {
-    background: #333 !important;
-    color: #aaa !important;
-}
 header nav.alt a {
     padding-top: 3px;
-    color: #aaa;
     border-radius: 5px;
     height: 27px;
-    background: #181818 !important;
 }
 .yorum-hakkinda .yorumcu-kullanici {
     padding-top: 3px;
-    color: #aaa;
     border-radius: 5px;
     height: 27px;
     background: none;
 }
 .menu-new {
-    background: #181818 !important;
     height: 30px;
     border: 0px;
     padding-top: 0;
@@ -336,12 +234,6 @@ header nav.alt a {
     border: none;
     border-left: 1px #555 solid;
 }
-.menu-new li a:hover,
-.dhsearch .dropdown .title,
-.dhsearch .dropdown .title:hover {
-    background: #181818;
-    color: #aaa;
-}
 .menu-new li div {
     margin-top: 8px;
 }
@@ -351,21 +243,13 @@ header nav.alt a {
     padding-top: 3px;
     padding-bottom: 3px;
     border-radius: 5px;
-    background: #333;
     margin: 0;
     height: 100%;
-}
-.menu-new li div a:hover,
-.menu-new li div p a:hover {
-    background: #666;
-    color: #aaa;
 }
 .menu-new li div {
     display: inline-block;
     position: absolute;
     top: 22px;
-    background: #333;
-    border-bottom: 1px solid #333;
     z-index: 99999999;
     width: 170px;
     border-bottom-left-radius: 3px;
@@ -380,18 +264,6 @@ header nav.alt a {
 .menu-new .search .button {
     height: 30px !important;
 }
-#topic-list-context .kl-basligi,
-.sayfasiralama .sayfa-git,
-.sayfasiralama span,
-.userSignature,
-font,
-.profile-new .right-feed .box .list .line.imza,
-.ki-btn.new-btn i,
-.ki-btn.new-btn span,
-.inboxYeni .mesajDetay .tek .sag .mesajgonder,
-.forum-galeri .ust .text {
-    color: #aaa !important;
-}
 .forumicerigibaslik .forumicerigibaslik-1,
 .forumicerigibaslik .forumicerigibaslik-2,
 .forumicerigibaslik .forumicerigibaslik-3,
@@ -401,8 +273,6 @@ font,
 .yanit-liste .tek,
 .yanit-liste .tek .icerik,
 .dhsearch .dropdown .dropdown-menu .list {
-    background: #212121;
-    color: #aaa;
     border: none;
 }
 .konuozel-acilir {
@@ -412,7 +282,6 @@ font,
 .gorev-menu ul,
 .tumistekler .tekistek .butonlar a.red,
 .topluislemler .red {
-    background: #212121;
     border: #a53f1d 1px solid !important;
     color: #aaa;
     border-radius: 5px;
@@ -425,21 +294,6 @@ font,
     color: #aaa;
     border-radius: 5px;
     box-shadow: none;
-}
-#topic-list-context .kl-icerik .kl-icerik-satir a,
-.inboxYeni .solMenu .ara .kutu,
-.forum-galeri .ust span, .tepe, .yanit-liste .tepe h2,.yanit-liste {
-    background: #212121 !important;
-    color: #aaa;
-}
-#topic-list-context .altsayfalar,
-.altsayfalar a,
-.konudakikullanici a,
-.konudakikullanici,
-.forumlistesi .forumnames a h2,
-.inboxYeni .mesajDetay .tek .sag .isim .rutbe,
-.mesaj-topluluk span {
-    color: #888;
 }
 #topic-list-context .kl-icerik .kl-icerik-satir a {
     background: none !important;
@@ -471,7 +325,6 @@ th,
 .mesajlarimbaslik a,
 .ozel-baslik,
 .ie-navigasyon .baslik {
-    background: #212121 !important;
     color: #a53f1d !important;
     border: none !important;
     border-radius: 5px !important;
@@ -486,7 +339,6 @@ th,
 .sagayasla .populer-button,
 .anket h1,
 .inboxYeni .mesajDetay .bilgi {
-    background: #212121;
     color: #a53f1d;
     border: none;
 }
@@ -517,13 +369,6 @@ th,
 .inboxYeni .solMenu .yenimesaj,
 .profile-new .right-feed .tabs a.active,.acilir-menu-1 span.bg:after {
     border: none;
-}
-.forumdizin,
-.forumdizin a,
-table tr td b,
-table tr td b a,
-table tr td b a:visited {
-    color: #aaa;
 }
 .kl-yazar img {
     mix-blend-mode: saturation;
@@ -586,55 +431,6 @@ table tr td b a:visited {
 .forum-galeri .ust #GaleriSecimiKutu {
     color: #888 !important;
 }
-.mentionTipBox,
-.More-Button,
-.dahafazlagoster,
-.anket,
-.tumarkadaslar .tekistek,
-.tumistekler .tekistek,
-.tumistekler .tekistek a,
-.tumarkadaslar .tekistek a,
-.modifybuttons,
-.modifybuttons .bilgi,
-.buton-yanit.beyaz {
-    background: #181818 !important;
-    color: #aaa !important;
-}
-.ki-cevapsahibi,
-.ki-giris {
-    border-right: 1px solid #111111;
-}
-.ki-cevaphakkinda,
-.kl-icerik .kl-icerik-satir,
-.inboxDarSol .topluislemsol,
-.mesajlarim,
-.dhsearch .dropdown .dropdown-menu .list li {
-    border-bottom: 1px solid #111111 !important;
-}
-.inboxDarSol .topluislemsol .profile-new .left-column .friends a,
-.profile-new .right-feed .box a,
-.profile-new .right-feed .choices a,
-.profile-new .right-feed .boxes a,
-.soltaraf .populerkonu a,
-.populersatir .populerbaslik,
-.eniyiforumlar,
-.titleclass td a,
-.forumicerigi .forumkonusu a,
-.dhsearchbar .searchbaslik2 span,
-.arabar .nedir .ust,
-.arabar .nerede span,
-.inboxYeni .solMenu,
-.inboxYeni .mesajListeDar .tek,
-.inboxYeni .mesajListeDar .tek .sag .baslik .konu,
-[bgcolor="F1F1F1"],
-.lnk-bkz,
-.etiketayari-full a,
-.sayfafull .soltaraf .hizli-forum-arama .tahminler,
-.sayfafull .soltaraf .hizli-forum-arama .tahminler a,
-.sayfafull .soltaraf .hizli-forum-arama .tahminler a strong {
-    background-color: #181818 !important;
-    color: #aaa !important;
-}
 .begenmesayisi,
 .notification .list .title .link,
 .sayfafull .forumistatistik a,
@@ -653,8 +449,6 @@ ul.token-input-list-facebook li input,
 ul.token-input-list-facebook,
 .favbuttons,
 .etiketayari-full {
-    background-color: #1d1d1d !important;
-    color: #aaa !important;
     border: none;
 }
 ul.token-input-list-facebook li input,
@@ -802,13 +596,6 @@ a.birdaha,
     border-bottom: 1px solid #1d1d1d !important;
     border-left: 1px solid #1d1d1d !important;
 }
-.ikide1renk .renklendir:nth-child(odd) .kl-icerik-satir,
-.iskelet,
-.iskelet .sol,
-.iskelet .sag .secenekler,
-.ie-navigasyon .kutu {
-    background-color: #181818 !important;
-}
 .notification .list,
 .bildirim-tutucu,
 .notification .list .bildirim.yeni,
@@ -819,20 +606,11 @@ a.birdaha,
 #leftwrapper .menu > li > a.active,
 .ie-navigasyon .kutu ul li,
 .ie-navigasyon .kutu ul li a {
-    background: #181818 !important;
-    color: #aaa !important;
     border: 1px solid #1f2128;
-}
-#leftwrapper .menu > li > ul li a {
-
-    background: #414141 !important;
-    color: #aaa !important;
 }
 .notification .list .bildirim,
 .sagtaraf .sagreklam,
 select {
-    background: #2b2d37 !important;
-    color: #aaa!important;
     border: 1px solid #1d1d1d;
 }
 .notification .list,
@@ -989,8 +767,6 @@ li.bildirimli a.aktif {
 }
 select[name="forumid"] {
     border-radius: 6px;
-    background: #000;
-    color: #aaa;
 }
 select[name="forumid"] option {
     padding-top: 2px;
@@ -1103,9 +879,7 @@ tr > td.c2:nth-of-type(5) a {
 
 .TTL_CustomToolbar {
     display: block;
-    color: #fff;
     position: fixed;
-    background-color: #181818;
     height: 100%;
     width: 300px;
     left: -200px;
@@ -1161,7 +935,6 @@ tr > td.c2:nth-of-type(5) a {
     margin-left: -5px;
     margin-right: -5px;
     font-size: 1.5em;
-    background-color: #000;
 }
 .TTL_ToolboxHead span {
     color: #aaa;
