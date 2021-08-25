@@ -20,17 +20,17 @@
     'use strict';
     var cssTxt = GM_getResourceText ("DH_DARK");
     var cssLightTxt = GM_getResourceText ("DH_LIGHT");
-        var ValDark = await GM.getValue("TTL_Dark", false);
+    var ValDark = await GM.getValue("TTL_Dark", false);
     if(ValDark) GM_addStyle (cssTxt);
     if(!ValDark) GM_addStyle (cssLightTxt);
 
-        var ValCevap = await GM.getValue("TTL_Cevap", false);
-        var ValPM = await GM.getValue("TTL_PM", false);
-        var ValFav = await GM.getValue("TTL_Fav", false);
-        var ValGec = await GM.getValue("TTL_Gec", false);
-        var ValFrm = await GM.getValue("TTL_Frm", false);
-        var ValBO = await GM.getValue("TTL_BO", false);
-        var ValSB = await GM.getValue("TTL_SB", false);
+    var ValCevap = await GM.getValue("TTL_Cevap", false);
+    var ValPM = await GM.getValue("TTL_PM", false);
+    var ValFav = await GM.getValue("TTL_Fav", false);
+    var ValGec = await GM.getValue("TTL_Gec", false);
+    var ValFrm = await GM.getValue("TTL_Frm", false);
+    var ValBO = await GM.getValue("TTL_BO", false);
+    var ValSB = await GM.getValue("TTL_SB", false);
 
     window.onload = async function() {
 
@@ -69,7 +69,6 @@
 
 
         var currentPage = $($('body')).html();
-        //var forumIDregex = new RegExp(/\/api2\/GlobalApi\/GetReplyForm\?forumID\=([a-z])\w+\&amp\;/g);
         var forumIDregex = new RegExp(/GetReplyForm\?forumID\=(.*?)\&/g);
         if(forumIDregex == "") {
             forumIDregex = new RegExp(/yeni-konu-(.*?)\" class\=\"kl-btn/g);
@@ -81,7 +80,6 @@
             forumID = forumIDregex.exec(currentPage)[1];
         }
         console.log("REGEX RESULT: "+forumID);
-        //var forumID = 2108;
         if(forumID != 0) {
             var kin = 1;
             var maxPageOnLeftBar = 2;
@@ -108,48 +106,45 @@
         }
 
         
-    var HTML_Settings = '<div class="TTL_Settings">'+
-        '<input type="checkbox" name="TTL_Dark" id="TTL_Dark"/>'+
-        '<label for="TTL_Dark">Dark mod</label><br/>'+
-        '<input type="checkbox" name="TTL_Cevap" id="TTL_Cevap"/>'+
-        '<label for="TTL_Cevap">"Cevaplanan" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_PM" id="TTL_PM"/>'+
-        '<label for="TTL_PM">"Özel Mesaj" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_Fav" id="TTL_Fav"/>'+
-        '<label for="TTL_Fav">"Favoriler" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_Gec" id="TTL_Gec"/>'+
-        '<label for="TTL_Gec">"Geçmiş" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_Frm" id="TTL_Frm"/>'+
-        '<label for="TTL_Frm">"Forumlarım" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
-        '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
-        '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
-        '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
-        '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
+        var HTML_Settings = '<div class="TTL_Settings">'+
+            '<input type="checkbox" name="TTL_Dark" id="TTL_Dark"/>'+
+            '<label for="TTL_Dark">Dark mod</label><br/>'+
+            '<input type="checkbox" name="TTL_Cevap" id="TTL_Cevap"/>'+
+            '<label for="TTL_Cevap">"Cevaplanan" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_PM" id="TTL_PM"/>'+
+            '<label for="TTL_PM">"Özel Mesaj" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_Fav" id="TTL_Fav"/>'+
+            '<label for="TTL_Fav">"Favoriler" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_Gec" id="TTL_Gec"/>'+
+            '<label for="TTL_Gec">"Geçmiş" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_Frm" id="TTL_Frm"/>'+
+            '<label for="TTL_Frm">"Forumlarım" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
+            '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
+            '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
+            '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
         
-    $('body').append('<div class="TTL_Popup" title="Ayarlar" id="dialog"></div>');
-    $(".TTL_Popup").html(HTML_Settings);
-    $('.takip').append('<a href="#" style="font-size: large" title="Supercharger" id="TTL_SettingsButton">⚡</a>');
-    $('#TTL_SettingsButton').click(function() {
-        $(".TTL_Popup").dialog(
-            {
-                modal: true, height: 400, width: 400,
-                hide: { effect: "fade", duration: 500 }
-            }
-            );
-    })
-    
-    if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
-    if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
-    if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
-    if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
-    if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
-    if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
-    if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
-    if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
-
-
-
+        $('body').append('<div class="TTL_Popup" title="Ayarlar" id="dialog"></div>');
+        $(".TTL_Popup").html(HTML_Settings);
+        $('.takip').append('<a href="#" style="font-size: large" title="Supercharger" id="TTL_SettingsButton">⚡</a>');
+        $('#TTL_SettingsButton').click(function() {
+            $(".TTL_Popup").dialog(
+                {
+                    modal: true, height: 400, width: 400,
+                    hide: { effect: "fade", duration: 500 }
+                }
+                );
+        })
+        
+        if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
+        if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
+        if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
+        if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
+        if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
+        if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
+        if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
+        if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
 
         $("#TTL_SettingsButton").click(function(){
             $(".TTL_Popup").html(HTML_Settings);
@@ -173,70 +168,5 @@
                 alert("Kaydedildi!");
             });
         });
-
-        /*if(getUrlParameter(window.location.href)["configPage"] === "true") {
-            var HTML_Settings = '<div class="TTL_Settings">'+
-                '<input type="checkbox" name="TTL_Dark" id="TTL_Dark"/>'+
-                '<label for="TTL_Dark">Dark mod</label><br/>'+
-                '<input type="checkbox" name="TTL_Cevap" id="TTL_Cevap"/>'+
-                '<label for="TTL_Cevap">"Cevaplanan" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_PM" id="TTL_PM"/>'+
-                '<label for="TTL_PM">"Özel Mesaj" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Fav" id="TTL_Fav"/>'+
-                '<label for="TTL_Fav">"Favoriler" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Gec" id="TTL_Gec"/>'+
-                '<label for="TTL_Gec">"Geçmiş" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Frm" id="TTL_Frm"/>'+
-                '<label for="TTL_Frm">"Forumlarım" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
-                '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
-                '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
-                '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
-            $(".dhorta").html(HTML_Settings);
-                if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
-                if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
-                if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
-                if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
-                if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
-                if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
-                if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
-            $("#TTL_Save").click(function() {
-                var TTL_Cevap  = $('#TTL_Cevap').is(":checked");
-                var TTL_PM     = $('#TTL_PM').is(":checked");
-                var TTL_Fav    = $('#TTL_Fav').is(":checked");
-                var TTL_Gec    = $('#TTL_Gec').is(":checked");
-                var TTL_Frm    = $('#TTL_Frm').is(":checked");
-                var TTL_BO     = $('#TTL_BO').is(":checked");
-                var TTL_SB     = $('#TTL_SB').is(":checked");
-                var TTL_Dark     = $('#TTL_Dark').is(":checked");
-                GM.setValue("TTL_Cevap", TTL_Cevap);
-                GM.setValue("TTL_PM", TTL_PM);
-                GM.setValue("TTL_Fav", TTL_Fav);
-                GM.setValue("TTL_Gec", TTL_Gec);
-                GM.setValue("TTL_Frm", TTL_Frm);
-                GM.setValue("TTL_BO", TTL_BO);
-                GM.setValue("TTL_SB", TTL_SB);
-                GM.setValue("TTL_Dark", TTL_Dark);
-                alert("Kaydedildi!");
-            });
-        }*/
-
-
-    }
-
-    function getUrlParameter(url) {
-        var toReturn = {};
-        var questionSplit = url.split('?');
-        questionSplit.shift();
-        var onlyParameters = questionSplit.join('?');
-        var splittedParameters = onlyParameters.split('&');
-        for (var c = 0; c < splittedParameters.length; c++) {
-            var parts = splittedParameters[c].split('=');
-            if ($.trim(parts[0]) != '') {
-                toReturn[parts[0]] = parts[1];
-            }
-        }
-        return toReturn;
     }
 })();
