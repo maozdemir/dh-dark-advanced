@@ -407,7 +407,7 @@ table tr td b a:visited  {
 .yanit-liste .tek .icerik,
 .dhsearch .dropdown .dropdown-menu .list,
 [id^=editor_], #vitrinEditor, #vitrinPreview,
-.ql-editor {
+.editor-scrolling-container .ql-editor {
     background: #212121 !important;
     color: #aaa !important;
     border: none !important;
@@ -708,7 +708,7 @@ ul.token-input-list-facebook,
 .favbuttons,
 .etiketayari-full,
 .covid-container a.show-more,
-.ikide1renk .renklendir:nth-child(even) .ki-hizli-cevap {
+.ki-hizli-cevap {
     background-color: #1d1d1d !important;
     color: #aaa !important;
     border: none;
@@ -1035,8 +1035,9 @@ table {
     display: none;
 }
 li.bildirimli a,
-li.bildirimli a.aktif {
-    border: 1px solid #a53f1d;
+li.bildirimli a.aktif,
+.post .ana-kutu {
+    border: 1px solid #a53f1d !important;
 }
 .ki-btn.new-btn,
 .ki-btn#onecikar #onecikarscriptkontrol {
