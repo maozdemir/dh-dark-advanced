@@ -33,30 +33,39 @@
     var ValFrm = await GM.getValue("TTL_Frm", false);
     var ValBO = await GM.getValue("TTL_BO", false);
     var ValSB = await GM.getValue("TTL_SB", false);
+    var ValRSB = await GM.getValue("TTL_RSB", false);
+    var ValCVD = await GM.getValue("TTL_CVD", false);
 
     window.onload = async function() {
 
         if(ValCevap) {
-            $("#login_header > div > div.sag > div.ana-menu > a:nth-child(1)").attr("style", "display: none !important");
+            $("div.ana-menu > a:nth-child(1)").attr("style", "display: none !important");
         }
         if(ValPM) {
-            $("#login_header > div > div.sag > div.ana-menu > a:nth-child(2)").attr("style", "display: none !important");
+            $("div.ana-menu > a:nth-child(2)").attr("style", "display: none !important");
         }
         if(ValFav) {
-            $("#login_header > div > div.sag > div.ana-menu > a:nth-child(3)").attr("style", "display: none !important");
+            $("div.ana-menu > a:nth-child(3)").attr("style", "display: none !important");
         }
         if(ValGec) {
-            $("#login_header > div > div.sag > div.ana-menu > a:nth-child(4)").attr("style", "display: none !important");
+            $("div.ana-menu > a:nth-child(4)").attr("style", "display: none !important");
         }
         if(ValFrm) {
-            $("#login_header > div > div.sag > div.ana-menu > span:nth-child(5)").attr("style", "display: none !important");
+            $("div.ana-menu > span:nth-child(5)").attr("style", "display: none !important");
         }
         if(ValBO) {
-            $("#login_header > div > div.sag > div.ana-menu > span:nth-child(6)").attr("style", "display: none !important");
+            $("div.ana-menu > span:nth-child(6)").attr("style", "display: none !important");
         }
         if(ValSB) {
-            $("#login_header > div > div.foruma-git").attr("style", "display: none !important");
+            $("div.foruma-git").attr("style", "display: none !important");
         }
+        if(ValRSB) {
+            $("div.dhsearch").attr("style", "display: none !important");
+        }
+        if(ValCVD) {
+            $("div.covid-container").attr("style", "display: none !important");
+        }
+        
 
 
         $('body').append('<div class="TTL_CustomToolbar"></div>');
@@ -124,7 +133,11 @@
             '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
             '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
             '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
-            '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
+            '<label for="TTL_SB">Foruma git kutusunu gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_RSB" id="TTL_SB"/>'+
+            '<label for="TTL_RSB">Arama kutusunu gizle</label><br/>'+
+            '<input type="checkbox" name="TTL_CVD" id="TTL_SB"/>'+
+            '<label for="TTL_CVD">Fırsatlar kutusunu gizle</label><br/>'+
             '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
         
         $('body').append('<div class="TTL_Popup" title="Ayarlar" id="dialog"></div>');
@@ -139,6 +152,8 @@
             if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
             if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
             if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
+            if(ValRSB == true)  { $('#TTL_RSB').prop("checked", true);}
+            if(ValCVD == true)  { $('#TTL_CVD').prop("checked", true);}
 
             $(".TTL_Popup").dialog(
                 {
@@ -157,6 +172,8 @@
                 var TTL_Frm    = $('#TTL_Frm').is(":checked");
                 var TTL_BO     = $('#TTL_BO').is(":checked");
                 var TTL_SB     = $('#TTL_SB').is(":checked");
+                var TTL_RSB     = $('#TTL_RSB').is(":checked");
+                var TTL_CVD     = $('#TTL_CVD').is(":checked");
                 var TTL_Dark     = $('#TTL_Dark').is(":checked");
                 GM.setValue("TTL_Cevap", TTL_Cevap);
                 GM.setValue("TTL_PM", TTL_PM);
@@ -165,6 +182,8 @@
                 GM.setValue("TTL_Frm", TTL_Frm);
                 GM.setValue("TTL_BO", TTL_BO);
                 GM.setValue("TTL_SB", TTL_SB);
+                GM.setValue("TTL_RSB", TTL_RSB);
+                GM.setValue("TTL_CVD", TTL_CVD);
                 GM.setValue("TTL_Dark", TTL_Dark);
                 alert("Kaydedildi!");
                 $(".TTL_Popup").dialog("close");
