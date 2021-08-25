@@ -371,7 +371,8 @@ header nav.alt a {
     visibility: hidden;
     box-shadow: none;
 }
-.menu-new .search {
+.menu-new .search,
+header .ust .sag .uye .cikis img {
     margin: 0;
 }
 .menu-new .search .box,
@@ -1151,7 +1152,6 @@ header.daralt .ust .sag .uye .cikis {
     content: none;
     font-size: 0!important;
     line-height: 0 !important;
-    font-size: 0;
 }
 
 header .ust .sag .uye .cikis {
@@ -1166,7 +1166,17 @@ tr > td.c2:nth-of-type(5) a {
 .sayfafull.cek .ie-navigasyon {
     width: 15%;
 }
-
+.supercharger {
+    font-size: x-large;
+    background: #181818 !important;
+    color: #aaa !important;
+    height: auto !important;
+    border-radius: 5px !important;
+    padding: 5px 0 !important;
+    display: inline-block !important;
+    padding-left: 5px !important;
+    margin-right: 10px;
+}
 .TTL_Popup {
     display: none;
     margin: auto;

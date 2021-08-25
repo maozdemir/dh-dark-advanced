@@ -127,11 +127,11 @@
         
         $('body').append('<div class="TTL_Popup" title="Ayarlar" id="dialog"></div>');
         $(".TTL_Popup").html(HTML_Settings);
-        $('.takip').append('<a href="#" style="font-size: large" title="Supercharger" id="TTL_SettingsButton">⚡</a>');
+        $('.sag .uye .avatar').before('<a href="#" title="Supercharger" id="TTL_SettingsButton" class="supercharger">⚡</a>');
         $('#TTL_SettingsButton').click(function() {
             $(".TTL_Popup").dialog(
                 {
-                    modal: true, height: 400, width: 400,
+                    modal: true,
                     hide: { effect: "fade", duration: 500 }
                 }
                 );
