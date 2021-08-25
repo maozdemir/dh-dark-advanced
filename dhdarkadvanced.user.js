@@ -148,10 +148,7 @@
                 );
         })
         
-
-
         $("#TTL_SettingsButton").click(function(){
-            $(".TTL_Popup").html(HTML_Settings);
             $("#TTL_Save").click(function() {
                 var TTL_Cevap  = $('#TTL_Cevap').is(":checked");
                 var TTL_PM     = $('#TTL_PM').is(":checked");
