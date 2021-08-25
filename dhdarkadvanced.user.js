@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         DH Dark Advanced
+// @name         Donanım Haber Supercharged
 // @namespace    http://tampermonkey.net/
-// @version      0.3-b1
-// @description  Gelişmiş Gece Modu
+// @version      1.1-b1
+// @description  Gelişmiş Gece Modu ve bi' ton özellik
 // @author       The Time Lord
 // @match        *://forum.donanimhaber.com/*
 // @grant        GM.getValue
@@ -14,6 +14,7 @@
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // ==/UserScript==
+
 
 (async function() {
     'use strict';
@@ -60,11 +61,6 @@
         var myVersion = GM_info.script.version;
         var settingsIcon = "https://raw.githubusercontent.com/impulsivus/DH-Gece-Modu/master/internals/baseline_settings_white_18dp.png";
         var headBar = "<div class=\"TTL_ToolboxHead\">"+
-            "<div class=\"settings\">"+
-            //"<a href=\"#\" id=\"TTL_SettingsButton\">"+
-            "<input type=\"image\" src=\""+settingsIcon+"\" id=\"TTL_SettingsButton\">"+
-           // "</a>"+
-            "</div>"+
             "<div class=\"text\">"+
             "DH Dark Advanced <span>"+myVersion+"</span>"+
             "</div>"+
@@ -111,37 +107,52 @@
             console.log(injectContent);
         }
 
+        
+    var HTML_Settings = '<div class="TTL_Settings">'+
+        '<input type="checkbox" name="TTL_Dark" id="TTL_Dark"/>'+
+        '<label for="TTL_Dark">Dark mod</label><br/>'+
+        '<input type="checkbox" name="TTL_Cevap" id="TTL_Cevap"/>'+
+        '<label for="TTL_Cevap">"Cevaplanan" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_PM" id="TTL_PM"/>'+
+        '<label for="TTL_PM">"Özel Mesaj" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_Fav" id="TTL_Fav"/>'+
+        '<label for="TTL_Fav">"Favoriler" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_Gec" id="TTL_Gec"/>'+
+        '<label for="TTL_Gec">"Geçmiş" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_Frm" id="TTL_Frm"/>'+
+        '<label for="TTL_Frm">"Forumlarım" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
+        '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
+        '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
+        '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
+        '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
+        
+    $('body').append('<div class="TTL_Popup" title="Ayarlar" id="dialog"></div>');
+    $(".TTL_Popup").html(HTML_Settings);
+    $('.takip').append('<a href="#" style="font-size: large" title="Supercharger" id="TTL_SettingsButton">⚡</a>');
+    $('#TTL_SettingsButton').click(function() {
+        $(".TTL_Popup").dialog(
+            {
+                modal: true, height: 400, width: 400,
+                hide: { effect: "explode", duration: 1000 }
+            }
+            );
+    })
+    
+    if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
+    if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
+    if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
+    if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
+    if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
+    if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
+    if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
+    if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
+
 
 
 
         $("#TTL_SettingsButton").click(function(){
-            var HTML_Settings = '<div class="TTL_Settings">'+
-                '<input type="checkbox" name="TTL_Dark" id="TTL_Dark"/>'+
-                '<label for="TTL_Dark">Dark mod</label><br/>'+
-                '<input type="checkbox" name="TTL_Cevap" id="TTL_Cevap"/>'+
-                '<label for="TTL_Cevap">"Cevaplanan" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_PM" id="TTL_PM"/>'+
-                '<label for="TTL_PM">"Özel Mesaj" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Fav" id="TTL_Fav"/>'+
-                '<label for="TTL_Fav">"Favoriler" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Gec" id="TTL_Gec"/>'+
-                '<label for="TTL_Gec">"Geçmiş" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_Frm" id="TTL_Frm"/>'+
-                '<label for="TTL_Frm">"Forumlarım" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_BO" id="TTL_BO"/>'+
-                '<label for="TTL_BO">"Bana Özel" düğmesini gizle</label><br/>'+
-                '<input type="checkbox" name="TTL_SB" id="TTL_SB"/>'+
-                '<label for="TTL_SB">Arama kutusunu gizle</label><br/>'+
-                '<input type="button" value="Kaydet" id="TTL_Save"/></div>';
-            $(".TTL_CustomToolbar").html(HTML_Settings);
-                if(ValDark == true) { $('#TTL_Dark').prop("checked", true);}
-                if(ValCevap == true) { $('#TTL_Cevap').prop("checked", true);}
-                if(ValPM == true)  { $('#TTL_PM').prop("checked", true);}
-                if(ValFav == true)  { $('#TTL_Fav').prop("checked", true);}
-                if(ValGec == true)  { $('#TTL_Gec').prop("checked", true);}
-                if(ValFrm == true)  { $('#TTL_Frm').prop("checked", true);}
-                if(ValBO == true)  { $('#TTL_BO').prop("checked", true);}
-                if(ValSB == true)  { $('#TTL_SB').prop("checked", true);}
+            $(".TTL_Popup").html(HTML_Settings);
             $("#TTL_Save").click(function() {
                 var TTL_Cevap  = $('#TTL_Cevap').is(":checked");
                 var TTL_PM     = $('#TTL_PM').is(":checked");
