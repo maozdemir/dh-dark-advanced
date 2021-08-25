@@ -9,6 +9,8 @@
 // @run-at       document-start
 // @grant        GM.setValue
 // @grant        GM.xmlHttpRequest
+// @require      https://code.jquery.com/jquery-3.6.0.min.js
+// @require      https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
 // @resource     DH_DARK https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.css
 // @resource     DH_LIGHT https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.light.css?ver=6
 // @grant           GM_addStyle
