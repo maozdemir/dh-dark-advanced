@@ -394,7 +394,8 @@ header .one-cikar .sag,
 .forumdizin a,
 table tr td b,
 table tr td b a,
-table tr td b a:visited  {
+table tr td b a:visited,
+.profil-sayfasi .profil-sol .post-kutu .baslik  {
     color: #aaa !important;
 }
 .forumicerigibaslik .forumicerigibaslik-1,
@@ -419,12 +420,13 @@ table tr td b a:visited  {
 .gorev-menu ul,
 .tumistekler .tekistek .butonlar a.red,
 .topluislemler .red,
-.editor-toolbar-container .send-button {
-    background: #212121;
+.editor-toolbar-container .send-button,
+.profil-sayfasi .profil-sol .post-kutu {
+    background: #212121 !important;
     border: #a53f1d 1px solid !important;
-    color: #aaa;
-    border-radius: 5px;
-    box-shadow: none;
+    color: #aaa !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
 }
 .tumistekler .tekistek .butonlar a.kabul,
 .topluislemler .kabul,
@@ -534,7 +536,8 @@ th,
     filter: hue-rotate(314deg) !important;
 }
 .sayisalresim img,
-.yorum .yoruma-git,.yanit-liste .tek .icerik img {
+.yorum .yoruma-git,.yanit-liste .tek .icerik img,
+.profil-sayfasi .profil-sol .post-kutu .baslik img {
     filter: invert(60%);
 }
 .sayisal-text b,
