@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Donanım Haber Supercharged
-// @namespace    http://tampermonkey.net/
-// @version      1.1-b1
+// @namespace    https://github.com/impulsivus/dh-dark-advanced
+// @version      1.2
 // @description  Gelişmiş Gece Modu ve bi' ton özellik
 // @author       The Time Lord
 // @match        *://forum.donanimhaber.com/*
@@ -74,7 +74,6 @@
             "</div>"+
             "</div>";
         $('.TTL_CustomToolbar').append(headBar);
-
 
         var currentPage = $($('body')).html();
         var forumIDregex = new RegExp(/GetReplyForm\?forumID\=(.*?)\&/g);
