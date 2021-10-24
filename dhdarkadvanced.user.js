@@ -12,7 +12,6 @@
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @require      https://code.jquery.com/ui/1.12.1/jquery-ui.min.js
 // @resource     DH_DARK https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.css
-// @resource     DH_LIGHT https://github.com/impulsiva/dh-dark-advanced/raw/beta/internal/forum.style.light.css
 // @grant           GM_addStyle
 // @grant           GM_getResourceText
 // ==/UserScript==
@@ -21,10 +20,8 @@
 (async function() {
     'use strict';
     var cssTxt = GM_getResourceText ("DH_DARK");
-    var cssLightTxt = GM_getResourceText ("DH_LIGHT");
     var ValDark = await GM.getValue("TTL_Dark", false);
-    if(ValDark) GM_addStyle (cssTxt);
-    if(!ValDark) GM_addStyle (cssLightTxt);
+    GM_addStyle (cssTxt);
 
     var ValCevap = await GM.getValue("TTL_Cevap", false);
     var ValPM = await GM.getValue("TTL_PM", false);
